@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 export default function Footer() {
   return (
     <footer className="bg-purple-deep border-t border-white/5 py-12">
@@ -11,7 +13,7 @@ export default function Footer() {
             <span className="font-display text-sm font-medium tracking-widest text-gold uppercase block mb-4">
               Speed Development
             </span>
-            <p className="font-body text-sm text-white/40">
+            <p className="font-body text-sm text-white/50">
               P.O. Box 245<br />
               Richmond, TX
             </p>
@@ -22,21 +24,21 @@ export default function Footer() {
             <span className="font-display text-xs font-bold tracking-widest uppercase text-white/30 mb-1">
               Links
             </span>
-            <a href="#program" className="font-body text-sm text-white/50 hover:text-gold transition-colors no-underline">
+            <a href="/#program" className="font-body text-sm text-white/60 hover:text-gold transition-colors no-underline">
               The Program
             </a>
-            <a href="/athletes" className="font-body text-sm text-white/50 hover:text-gold transition-colors no-underline">
+            <Link to="/athletes" className="font-body text-sm text-white/60 hover:text-gold transition-colors no-underline">
               Athletes
-            </a>
-            <a href="#results" className="font-body text-sm text-white/50 hover:text-gold transition-colors no-underline">
+            </Link>
+            <a href="/#results" className="font-body text-sm text-white/60 hover:text-gold transition-colors no-underline">
               Results
             </a>
-            <a href="/apply" className="font-body text-sm text-white/50 hover:text-gold transition-colors no-underline">
+            <Link to="/apply" className="font-body text-sm text-white/60 hover:text-gold transition-colors no-underline">
               Apply
-            </a>
+            </Link>
           </div>
 
-          {/* Socials */}
+          {/* Connect */}
           <div className="flex flex-col gap-2">
             <span className="font-display text-xs font-bold tracking-widest uppercase text-white/30 mb-1">
               Connect
@@ -45,7 +47,7 @@ export default function Footer() {
               href="https://www.instagram.com/i_coach_speed/"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-body text-sm text-white/50 hover:text-gold transition-colors no-underline"
+              className="font-body text-sm text-white/60 hover:text-gold transition-colors no-underline"
             >
               Instagram — @i_coach_speed
             </a>
@@ -53,7 +55,7 @@ export default function Footer() {
               href="https://x.com/I_Coach_Speed"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-body text-sm text-white/50 hover:text-gold transition-colors no-underline"
+              className="font-body text-sm text-white/60 hover:text-gold transition-colors no-underline"
             >
               X — @I_Coach_Speed
             </a>
@@ -61,10 +63,13 @@ export default function Footer() {
               href="https://www.apxpspeed.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-body text-sm text-white/50 hover:text-gold transition-colors no-underline"
+              className="font-body text-sm text-white/60 hover:text-gold transition-colors no-underline"
             >
               apxpspeed.com
             </a>
+            <p className="font-body text-sm text-white/40 mt-2">
+              Questions? DM on Instagram or reach out through the apply form.
+            </p>
           </div>
         </div>
 

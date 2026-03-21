@@ -51,7 +51,7 @@ function AthleteCard({ athlete, index }: { athlete: Athlete; index: number }) {
             <span className="font-display font-bold text-xl md:text-2xl text-gold leading-none block">
               {stat.value}
             </span>
-            <span className="font-display text-[10px] tracking-widest uppercase text-white/40 mt-1 block">
+            <span className="font-display text-[11px] tracking-widest uppercase text-white/60 mt-1 block">
               {stat.note || stat.label}
             </span>
           </div>
@@ -84,13 +84,13 @@ function AthleteCard({ athlete, index }: { athlete: Athlete; index: number }) {
             className="overflow-hidden"
           >
             <div className="p-5 border-t border-purple-mid/30">
-              <p className="font-body text-base text-white/70 leading-relaxed mb-4">
+              <p className="font-body text-base text-white/80 leading-relaxed mb-4">
                 {athlete.bio}
               </p>
 
               {athlete.quote && (
                 <blockquote className="border-l-2 border-gold pl-4 mb-4">
-                  <p className="font-body text-base italic text-white/60">
+                  <p className="font-body text-base italic text-white/70">
                     "{athlete.quote}"
                   </p>
                 </blockquote>
@@ -106,7 +106,7 @@ function AthleteCard({ athlete, index }: { athlete: Athlete; index: number }) {
                     <div key={i} className="bg-purple-deep/50 px-3 py-2 rounded">
                       <span className="font-display font-bold text-sm text-white">{pr.event}: {pr.mark}</span>
                       {pr.note && (
-                        <span className="block font-body text-xs text-white/40 mt-0.5">{pr.note}</span>
+                        <span className="block font-body text-xs text-white/60 mt-0.5">{pr.note}</span>
                       )}
                     </div>
                   ))}
@@ -121,7 +121,7 @@ function AthleteCard({ athlete, index }: { athlete: Athlete; index: number }) {
                   </h4>
                   <ul className="space-y-1">
                     {athlete.awards.map((award, i) => (
-                      <li key={i} className="font-body text-sm text-white/60 flex items-start gap-2">
+                      <li key={i} className="font-body text-sm text-white/70 flex items-start gap-2">
                         <span className="text-gold mt-1">•</span> {award}
                       </li>
                     ))}

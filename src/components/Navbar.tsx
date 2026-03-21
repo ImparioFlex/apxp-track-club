@@ -22,7 +22,6 @@ export default function Navbar() {
     { label: 'Program', href: isHome ? '#program' : '/#program' },
     { label: 'Athletes', href: '/athletes' },
     { label: 'Results', href: isHome ? '#results' : '/#results' },
-    { label: 'Apply', href: '/apply' },
   ];
 
   const bg = scrolled || !isHome
@@ -64,7 +63,7 @@ export default function Navbar() {
         {/* Mobile Hamburger */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="md:hidden flex flex-col gap-1.5 p-2 bg-transparent border-none cursor-pointer"
+          className="md:hidden flex flex-col gap-1.5 p-3 bg-transparent border-none cursor-pointer"
           aria-label="Toggle menu"
         >
           <span className={`block w-6 h-0.5 bg-white transition-transform ${mobileOpen ? 'rotate-45 translate-y-2' : ''}`} />

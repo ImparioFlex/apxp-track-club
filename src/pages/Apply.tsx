@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const eventOptions = [
@@ -117,10 +118,26 @@ export default function Apply() {
           <h1 className="font-display font-extrabold text-3xl md:text-4xl uppercase text-white mb-4">
             Application Received
           </h1>
-          <p className="font-body text-lg text-white/60 leading-relaxed">
+          <p className="font-body text-lg text-white/60 leading-relaxed mb-8">
             Coach McCray will review your application and follow up within 7 days.
             Thank you for your interest in APXP Speed Development.
           </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/"
+              className="font-display text-sm font-bold tracking-widest uppercase text-white border-2 border-white/20 px-6 py-3 hover:border-gold hover:text-gold transition-colors no-underline text-center"
+            >
+              Back to Home
+            </Link>
+            <a
+              href="https://www.instagram.com/i_coach_speed/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-display text-sm font-bold tracking-widest uppercase bg-gold/10 text-gold border-2 border-gold/30 px-6 py-3 hover:bg-gold/20 transition-colors no-underline text-center"
+            >
+              Follow @i_coach_speed
+            </a>
+          </div>
         </motion.div>
       </main>
     );
@@ -181,7 +198,7 @@ export default function Apply() {
                   />
                 </div>
 
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="font-display text-xs font-bold tracking-widest uppercase text-text-muted block mb-1.5">
                       Date of Birth
@@ -242,7 +259,7 @@ export default function Apply() {
                   />
                 </div>
 
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="font-display text-xs font-bold tracking-widest uppercase text-text-muted block mb-1.5">
                       Email *
@@ -308,7 +325,7 @@ export default function Apply() {
                     <label className="font-display text-xs font-bold tracking-widest uppercase text-text-muted block mb-3">
                       Current PRs
                     </label>
-                    <div className="grid grid-cols-2 gap-3">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                       {form.events.map(event => (
                         <div key={event}>
                           <span className="font-display text-xs font-semibold text-purple-dark block mb-1">

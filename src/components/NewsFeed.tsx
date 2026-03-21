@@ -3,12 +3,14 @@ import { newsItems } from '../data/news';
 import { useInView } from '../hooks/useInView';
 
 function NewsCard({ item, large = false }: { item: typeof newsItems[0]; large?: boolean }) {
+  const isRealLink = item.sourceUrl && item.sourceUrl !== '#';
+  const Tag = isRealLink ? 'a' : 'div';
+  const linkProps = isRealLink ? { href: item.sourceUrl, target: '_blank', rel: 'noopener noreferrer' } : {};
+
   return (
-    <a
-      href={item.sourceUrl}
-      target="_blank"
-      rel="noopener noreferrer"
-      className={`group block overflow-hidden bg-white shadow-sm hover:shadow-xl transition-all duration-300 no-underline ${large ? 'row-span-2' : ''}`}
+    <Tag
+      {...linkProps}
+      className={`group block overflow-hidden bg-white shadow-sm hover:shadow-xl transition-all duration-300 no-underline ${isRealLink ? 'cursor-pointer' : ''} ${large ? 'row-span-2' : ''}`}
     >
       <div className={`relative overflow-hidden ${large ? 'h-64 md:h-full' : 'h-40'}`}>
         <img
@@ -33,12 +35,14 @@ function NewsCard({ item, large = false }: { item: typeof newsItems[0]; large?: 
         )}
         <div className="flex items-center justify-between">
           <span className="font-body text-sm text-text-muted">{item.date}</span>
-          <span className="font-display text-xs font-semibold tracking-wider uppercase text-purple-dark">
-            {item.sourceName} →
-          </span>
+          {isRealLink && (
+            <span className="font-display text-xs font-semibold tracking-wider uppercase text-purple-dark">
+              {item.sourceName} →
+            </span>
+          )}
         </div>
       </div>
-    </a>
+    </Tag>
   );
 }
 

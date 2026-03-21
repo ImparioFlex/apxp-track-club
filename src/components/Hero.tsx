@@ -93,19 +93,19 @@ export default function Hero() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-          className="flex flex-wrap justify-center gap-8 md:gap-16 mb-14"
+          className="grid grid-cols-1 sm:grid-cols-3 gap-8 md:gap-16 mb-14 max-w-3xl mx-auto"
         >
           <div className="text-center">
             <CountUp end="6.59" duration={2500} />
-            <p className="font-display text-xs md:text-sm tracking-widest uppercase text-white/50 mt-2">World U18 Record</p>
+            <p className="font-display text-xs md:text-sm tracking-widest uppercase text-white/70 mt-2">World U18 Record</p>
           </div>
           <div className="text-center">
             <CountUp end="100" suffix="%" duration={2000} />
-            <p className="font-display text-xs md:text-sm tracking-widest uppercase text-white/50 mt-2">Scholarship Rate</p>
+            <p className="font-display text-xs md:text-sm tracking-widest uppercase text-white/70 mt-2">Scholarship Rate</p>
           </div>
           <div className="text-center">
             <span className="tabular-nums font-display font-bold text-5xl md:text-7xl text-gold leading-none">$1M+</span>
-            <p className="font-display text-xs md:text-sm tracking-widest uppercase text-white/50 mt-2">Athletic Aid Earned</p>
+            <p className="font-display text-xs md:text-sm tracking-widest uppercase text-white/70 mt-2">Athletic Aid Earned</p>
           </div>
         </motion.div>
 
@@ -128,7 +128,7 @@ export default function Hero() {
       <div className="relative z-10 bg-gold/10 border-t border-b border-gold/20 py-3 overflow-hidden mt-auto">
         <div className="ticker-scroll flex whitespace-nowrap">
           {[...tickerItems, ...tickerItems].map((item, i) => (
-            <span key={i} className="inline-flex items-center gap-3 px-8 font-display text-sm tracking-wide">
+            <span key={i} className="inline-flex items-center gap-3 px-8 font-display text-sm md:text-base tracking-wide">
               <span className="w-1.5 h-1.5 bg-gold rounded-full flex-shrink-0" />
               <span className="text-gold font-bold uppercase">{item.athlete}</span>
               <span className="text-white/60">{item.result}</span>
