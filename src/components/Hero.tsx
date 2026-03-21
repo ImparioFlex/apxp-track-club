@@ -53,7 +53,7 @@ export default function Hero() {
       {/* Background image overlay */}
       <div
         className="absolute inset-0 bg-cover bg-center opacity-20"
-        style={{ backgroundImage: "url('https://images.unsplash.com/photo-1532444458054-01a7dd3e9fca?w=1920&h=1080&fit=crop')" }}
+        style={{ backgroundImage: "url('https://images.unsplash.com/photo-1526676317768-d9b14f15615a?w=1920&h=1080&fit=crop')" }}
       />
 
       {/* Diagonal yellow stripe */}

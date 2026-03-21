@@ -19,7 +19,7 @@ export const newsItems: NewsItem[] = [
     tag: 'VIRAL',
     sourceUrl: 'https://www.essentiallysports.com/olympics-news-track-and-field-news-next-usain-bolt-texas-native-shocks-track-and-field-world-over-impossible-run/',
     sourceName: 'EssentiallySports',
-    image: 'https://images.unsplash.com/photo-1587280501635-68a0e82cd5ff?w=800&h=500&fit=crop',
+    image: 'https://image-cdn.essentiallysports.com/wp-content/uploads/Dillon-Mitchell-1.jpg',
     featured: true,
   },
   {
@@ -30,7 +30,7 @@ export const newsItems: NewsItem[] = [
     tag: 'NATIONALS',
     sourceUrl: 'https://tx.milesplit.com/teams/69060-apxp-speed-development',
     sourceName: 'MileSplit',
-    image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=500&fit=crop',
+    image: 'https://trackandfieldnews.com/wp-content/uploads/2026/03/mariah-mia-maxwell-04-26.jpg',
   },
   {
     id: 'mia-gatorade',
@@ -40,7 +40,7 @@ export const newsItems: NewsItem[] = [
     tag: 'AWARD',
     sourceUrl: '#',
     sourceName: 'Gatorade',
-    image: 'https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=800&h=500&fit=crop',
+    image: 'https://images.unsplash.com/photo-1766970096331-78c8af007a3b?w=800&h=500&fit=crop',
   },
   {
     id: 'dillon-world-record',
@@ -50,7 +50,7 @@ export const newsItems: NewsItem[] = [
     tag: 'WORLD RECORD',
     sourceUrl: 'https://www.newsweek.com/sports/16-year-old-american-dillon-mitchell-breaks-world-record-in-60m-race-11637922',
     sourceName: 'Newsweek',
-    image: 'https://images.unsplash.com/photo-1532444458054-01a7dd3e9fca?w=800&h=500&fit=crop',
+    image: 'https://cdn.abcotvs.com/dip/images/18625778_AOTW-JGL-dillon-mitchell.jpg?w=1600',
   },
   {
     id: 'mariah-300m-record',
@@ -60,7 +60,7 @@ export const newsItems: NewsItem[] = [
     tag: 'NATIONAL RECORD',
     sourceUrl: '#',
     sourceName: 'FloTrack',
-    image: 'https://images.unsplash.com/photo-1552196563-55cd4e45efb3?w=800&h=500&fit=crop',
+    image: 'https://images.unsplash.com/photo-1667351391926-51a9460aeec9?w=800&h=500&fit=crop',
   },
   {
     id: 'usatf-indoors-sweep',
@@ -70,7 +70,7 @@ export const newsItems: NewsItem[] = [
     tag: 'RESULTS',
     sourceUrl: '#',
     sourceName: 'USATF',
-    image: 'https://images.unsplash.com/photo-1474224017046-182ece80b263?w=800&h=500&fit=crop',
+    image: 'https://images.unsplash.com/photo-1584868215080-18ca6d2e47de?w=800&h=500&fit=crop',
   },
   {
     id: 'sam-nike-indoors',
@@ -80,7 +80,7 @@ export const newsItems: NewsItem[] = [
     tag: 'NATIONALS',
     sourceUrl: '#',
     sourceName: 'MileSplit',
-    image: 'https://images.unsplash.com/photo-1517931524326-bdd55a541177?w=800&h=500&fit=crop',
+    image: 'https://images.unsplash.com/photo-1700914297819-5f36da8c83d7?w=800&h=500&fit=crop',
   },
 ];
 

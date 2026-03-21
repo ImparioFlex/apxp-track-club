@@ -44,7 +44,7 @@ export const coachBio = {
   bio: "A Richmond, Texas native, Danny McCray competed at the highest levels of track and field — from Texas A&M to the Olympic Games. After a professional career that included the Pan American Games, World Championships, and Olympic Team USA, he returned home to build what he wished existed when he was coming up: a program that develops speed, track intelligence, and the complete athlete ready for Division I and beyond.",
   quote: "I don't just coach speed. I coach the athlete who's going to walk into a D1 program on day one and compete — not adjust, compete.",
   podcastUrl: 'https://creators.spotify.com/pod/show/gillathletics/episodes/246-Danny-McCray-Private-Coaching-Tutor-APXP-e2b3r0g',
-  photo: 'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=700&h=900&fit=crop',
+  photo: 'https://cdn.prod.website-files.com/654860de7561977e0c65bdf4/658f81ed3bf50096abc22eb8_danny-mccray.jpg',
 };
 
 export const collegeLogos = [
