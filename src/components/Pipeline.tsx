@@ -27,10 +27,10 @@ function AnimatedStat({ stat, inView }: { stat: typeof pipelineStats[0]; inView:
 
   return (
     <div className="text-center">
-      <span className="font-display font-bold text-5xl md:text-6xl text-gold leading-none block tabular-nums">
+      <span className="font-display font-bold text-5xl md:text-6xl text-purple-dark leading-none block tabular-nums">
         {stat.prefix || ''}{count}{stat.suffix}
       </span>
-      <p className="font-display text-sm md:text-base tracking-widest uppercase text-white/60 mt-2 max-w-[180px] mx-auto">
+      <p className="font-display text-sm md:text-base tracking-widest uppercase text-text-muted mt-2 max-w-[180px] mx-auto">
         {stat.label}
       </p>
     </div>
@@ -41,23 +41,20 @@ export default function Pipeline() {
   const { ref, inView } = useInView(0.15);
 
   return (
-    <section className="relative bg-purple-deep py-20 md:py-28 noise-overlay overflow-hidden">
-      {/* Background accent */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-mid/20 rounded-full blur-[120px] pointer-events-none" />
-
-      <div className="relative z-10 max-w-7xl mx-auto px-6 text-center" ref={ref}>
+    <section className="bg-surface-light py-20 md:py-28 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 text-center" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          <p className="font-display text-sm font-semibold tracking-[0.3em] uppercase text-gold mb-2">
+          <p className="font-display text-base font-semibold tracking-[0.3em] uppercase text-gold-dim mb-2">
             Track Record
           </p>
-          <h2 className="font-display font-extrabold text-4xl md:text-6xl uppercase text-white leading-none mb-4">
+          <h2 className="font-display font-extrabold text-4xl md:text-6xl uppercase text-text-dark leading-none mb-4">
             Where They Go Next
           </h2>
-          <p className="font-body text-lg text-white/50 max-w-xl mx-auto mb-14">
+          <p className="font-body text-lg text-text-muted max-w-xl mx-auto mb-14">
             Fast times become futures. Our athletes don't just break records — they earn full-ride scholarships and compete at the highest level.
           </p>
         </motion.div>
@@ -80,19 +77,20 @@ export default function Pipeline() {
           animate={inView ? { opacity: 1 } : {}}
           transition={{ duration: 0.6, delay: 0.5 }}
         >
-          <p className="font-display text-xs tracking-[0.3em] uppercase text-white/30 mb-6">
+          <p className="font-display text-sm tracking-[0.3em] uppercase text-text-muted mb-8">
             Where APXP Athletes Compete
           </p>
-          <div className="flex flex-wrap justify-center gap-5 md:gap-6">
+          <div className="flex flex-wrap justify-center gap-6 md:gap-8">
             {collegeLogos.map(college => (
               <div
                 key={college.name}
-                className="flex items-center justify-center bg-white rounded-lg px-5 py-4 hover:shadow-lg hover:shadow-gold/10 hover:scale-105 transition-all w-24 h-20 md:w-28 md:h-24"
+                className="flex items-center justify-center hover:scale-110 transition-transform w-16 h-16 md:w-20 md:h-20"
+                title={college.name}
               >
                 <img
                   src={college.logo}
                   alt={college.name}
-                  className="max-w-full max-h-full object-contain"
+                  className="max-w-full max-h-full object-contain drop-shadow-sm"
                   loading="lazy"
                 />
               </div>
