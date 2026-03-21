@@ -14,37 +14,11 @@ export default function SplashScreen({ onComplete }: { onComplete: () => void })
   const isDesktop = useIsDesktop();
 
   useEffect(() => {
-    const t1 = setTimeout(() => setPhase('logo'), 900);
-    const t2 = setTimeout(() => setPhase('exit'), 2400);
-    const t3 = setTimeout(() => onComplete(), 3000);
+    const t1 = setTimeout(() => setPhase('logo'), 800);
+    const t2 = setTimeout(() => setPhase('exit'), 2200);
+    const t3 = setTimeout(() => onComplete(), 2800);
     return () => { clearTimeout(t1); clearTimeout(t2); clearTimeout(t3); };
   }, [onComplete]);
-
-  // Desktop: zoom bolt in from large, then zoom logo in
-  // Mobile: simple fade + slide (no scale = no jank)
-  const boltAnimation = isDesktop
-    ? {
-        initial: { scale: 4, opacity: 0, rotate: -10 },
-        bolt: { scale: 1, opacity: 1, rotate: 0 },
-        out: { scale: 0.3, opacity: 0 },
-      }
-    : {
-        initial: { opacity: 0, y: 20 },
-        bolt: { opacity: 1, y: 0 },
-        out: { opacity: 0, y: -30 },
-      };
-
-  const logoAnimation = isDesktop
-    ? {
-        initial: { scale: 0.5, opacity: 0 },
-        visible: { scale: 1, opacity: 1 },
-        hidden: { scale: 0.5, opacity: 0 },
-      }
-    : {
-        initial: { opacity: 0 },
-        visible: { opacity: 1 },
-        hidden: { opacity: 0 },
-      };
 
   return (
     <motion.div
@@ -56,26 +30,34 @@ export default function SplashScreen({ onComplete }: { onComplete: () => void })
     >
       {/* Background glow — desktop only */}
       {isDesktop && (
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gold/5 rounded-full blur-[120px]" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gold/5 rounded-full blur-[150px]" />
       )}
 
       {/* Lightning bolt */}
       <motion.svg
         viewBox="0 0 120 200"
-        className="w-16 md:w-28 absolute"
-        style={isDesktop ? { willChange: 'transform, opacity' } : { willChange: 'opacity' }}
-        initial={boltAnimation.initial}
-        animate={phase === 'bolt' ? boltAnimation.bolt : boltAnimation.out}
-        transition={{
-          duration: phase === 'bolt' ? 0.7 : 0.4,
-          ease: [0.22, 1, 0.36, 1],
-        }}
+        className="w-20 md:w-28 absolute"
+        initial={isDesktop ? { scale: 3, opacity: 0, rotate: -15 } : { opacity: 0, y: 20 }}
+        animate={
+          phase === 'bolt'
+            ? isDesktop
+              ? { scale: 1, opacity: 1, rotate: 0 }
+              : { opacity: 1, y: 0 }
+            : isDesktop
+              ? { scale: 0.5, opacity: 0, y: -40 }
+              : { opacity: 0, y: -30 }
+        }
+        transition={
+          phase === 'bolt'
+            ? { duration: 0.6, ease: [0.22, 1, 0.36, 1] }
+            : { duration: 0.4, ease: 'easeIn' }
+        }
       >
         <path
           d="M75 5 L30 95 L55 95 L40 195 L95 85 L65 85 L85 5 Z"
           fill="none"
-          stroke="#E8D44D"
-          strokeWidth="4"
+          stroke="#2D1B69"
+          strokeWidth="6"
           strokeLinejoin="round"
         />
         <path
@@ -86,32 +68,35 @@ export default function SplashScreen({ onComplete }: { onComplete: () => void })
         <path
           d="M72 20 L38 90 L58 90 L46 180 L88 90 L66 90 L80 20 Z"
           fill="#f0e060"
-          opacity="0.5"
+          opacity="0.6"
         />
       </motion.svg>
 
-      {/* Logo */}
+      {/* Logo image */}
       <motion.img
         src="/apxp-logo-light.png"
         alt="APXP"
         className="w-72 md:w-[460px] relative z-10"
-        style={isDesktop ? { willChange: 'transform, opacity' } : { willChange: 'opacity' }}
-        initial={logoAnimation.initial}
+        initial={isDesktop ? { scale: 0.3, opacity: 0 } : { opacity: 0 }}
         animate={
           phase === 'logo' || phase === 'exit'
-            ? logoAnimation.visible
-            : logoAnimation.hidden
+            ? isDesktop
+              ? { scale: 1, opacity: 1 }
+              : { opacity: 1 }
+            : isDesktop
+              ? { scale: 0.3, opacity: 0 }
+              : { opacity: 0 }
         }
         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
       />
 
       {/* Loading bar */}
-      <div className="absolute bottom-20 w-44 md:w-56 h-1 bg-white/10 rounded-full overflow-hidden">
+      <div className="absolute bottom-20 w-48 md:w-64 h-1 bg-white/10 rounded-full overflow-hidden">
         <motion.div
           className="h-full bg-gold rounded-full"
           initial={{ width: '0%' }}
           animate={{ width: '100%' }}
-          transition={{ duration: 2.4, ease: 'easeInOut' }}
+          transition={{ duration: 2.2, ease: 'easeInOut' }}
         />
       </div>
 
@@ -120,7 +105,7 @@ export default function SplashScreen({ onComplete }: { onComplete: () => void })
         className="absolute bottom-12 font-display text-sm tracking-[0.4em] uppercase text-white/30"
         initial={{ opacity: 0 }}
         animate={{ opacity: phase === 'logo' ? 1 : 0 }}
-        transition={{ duration: 0.3, delay: 0.15 }}
+        transition={{ duration: 0.4, delay: 0.2 }}
       >
         Speed Development
       </motion.p>
