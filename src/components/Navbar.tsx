@@ -32,13 +32,13 @@ export default function Navbar() {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${bg}`}>
-      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-18">
+      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-20">
         {/* Logo */}
         <Link to="/" className="flex items-center no-underline">
           <img
             src="/apxp-logo-light.png"
             alt="APXP Speed Development"
-            className="h-8 md:h-10 w-auto"
+            className="h-12 md:h-14 w-auto"
           />
         </Link>
 

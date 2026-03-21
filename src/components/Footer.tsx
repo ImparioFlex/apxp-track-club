@@ -39,7 +39,7 @@ export default function Footer() {
             <img
               src="/apxp-logo-light.png"
               alt="APXP Speed Development"
-              className="h-12 md:h-14 w-auto mb-2"
+              className="h-14 md:h-16 w-auto mb-2"
             />
             <span className="font-display text-base font-semibold tracking-[0.2em] text-gold uppercase block">
               Speed Development

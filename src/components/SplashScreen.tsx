@@ -65,9 +65,9 @@ export default function SplashScreen({ onComplete }: { onComplete: () => void })
 
         {/* Logo image */}
         <motion.img
-          src="/apxp-logo.png"
+          src="/apxp-logo-light.png"
           alt="APXP"
-          className="w-64 md:w-80 relative z-10"
+          className="w-80 md:w-[500px] relative z-10"
           initial={{ scale: 0.3, opacity: 0 }}
           animate={
             phase === 'logo' || phase === 'exit'
