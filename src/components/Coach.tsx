@@ -71,10 +71,10 @@ export default function Coach() {
               href={coachBio.podcastUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 font-display text-sm font-bold tracking-wider uppercase text-purple-dark hover:text-gold-dim transition-colors no-underline"
+              className="inline-flex items-center gap-3 font-display text-base md:text-lg font-bold tracking-wider uppercase bg-purple-deep text-white px-6 py-4 hover:bg-purple-mid transition-colors no-underline mt-2"
             >
-              Listen to Coach McCray on the Gill Athletics Podcast
-              <span className="text-lg">→</span>
+              <span className="text-2xl">🎙️</span>
+              Listen: Coach McCray on the Gill Athletics Podcast →
             </a>
           </motion.div>
         </div>
