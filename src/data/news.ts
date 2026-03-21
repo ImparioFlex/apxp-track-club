@@ -50,7 +50,7 @@ export const newsItems: NewsItem[] = [
     tag: 'WORLD RECORD',
     sourceUrl: 'https://www.newsweek.com/sports/16-year-old-american-dillon-mitchell-breaks-world-record-in-60m-race-11637922',
     sourceName: 'Newsweek',
-    image: 'https://cdn.abcotvs.com/dip/images/18625778_AOTW-JGL-dillon-mitchell.jpg?w=1600',
+    image: 'https://i0.wp.com/tdalabamamag.com/wp-content/uploads/2026/03/GfdRK0TXUAAFNDO.jpg?resize=1000&ssl=1',
   },
   {
     id: 'mariah-300m-record',
