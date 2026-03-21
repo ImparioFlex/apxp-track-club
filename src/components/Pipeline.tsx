@@ -83,15 +83,18 @@ export default function Pipeline() {
           <p className="font-display text-xs tracking-[0.3em] uppercase text-white/30 mb-6">
             Where APXP Athletes Compete
           </p>
-          <div className="flex flex-wrap justify-center gap-6 md:gap-10">
+          <div className="flex flex-wrap justify-center gap-5 md:gap-6">
             {collegeLogos.map(college => (
               <div
-                key={college.abbreviation}
-                className="flex items-center justify-center bg-white/5 border border-white/10 px-6 py-4 rounded hover:border-gold/30 hover:bg-gold/5 transition-all"
+                key={college.name}
+                className="flex items-center justify-center bg-white rounded-lg px-5 py-4 hover:shadow-lg hover:shadow-gold/10 hover:scale-105 transition-all w-24 h-20 md:w-28 md:h-24"
               >
-                <span className="font-display font-bold text-xl md:text-2xl tracking-wider text-white/70">
-                  {college.abbreviation}
-                </span>
+                <img
+                  src={college.logo}
+                  alt={college.name}
+                  className="max-w-full max-h-full object-contain"
+                  loading="lazy"
+                />
               </div>
             ))}
           </div>

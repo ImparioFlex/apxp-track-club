@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import { tickerItems } from '../data/news';
+import { useApply } from '../context/ApplyContext';
 
 function CountUp({ end, suffix = '', duration = 2000 }: { end: string; suffix?: string; duration?: number }) {
   const [display, setDisplay] = useState('0');
@@ -48,6 +48,7 @@ function CountUp({ end, suffix = '', duration = 2000 }: { end: string; suffix?: 
 }
 
 export default function Hero() {
+  const { openApply } = useApply();
   return (
     <section className="relative min-h-screen flex flex-col justify-center overflow-hidden bg-purple-deep">
       {/* Background image overlay */}
@@ -115,23 +116,23 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
         >
-          <Link
-            to="/apply"
-            className="inline-block font-display font-bold text-lg tracking-wider uppercase bg-gold text-purple-deep px-10 py-4 hover:bg-gold-bright transition-all hover:scale-105 no-underline"
+          <button
+            onClick={openApply}
+            className="font-display font-bold text-lg tracking-wider uppercase bg-gold text-purple-deep px-10 py-4 hover:bg-gold-bright transition-all hover:scale-105 border-none cursor-pointer"
           >
             Apply Now
-          </Link>
+          </button>
         </motion.div>
       </div>
 
       {/* Results ticker */}
-      <div className="relative z-10 bg-gold/10 border-t border-b border-gold/20 py-3 overflow-hidden mt-auto">
+      <div className="relative z-10 bg-gold/10 border-t-2 border-b-2 border-gold/25 py-5 overflow-hidden mt-auto">
         <div className="ticker-scroll flex whitespace-nowrap">
           {[...tickerItems, ...tickerItems].map((item, i) => (
-            <span key={i} className="inline-flex items-center gap-3 px-8 font-display text-sm md:text-base tracking-wide">
-              <span className="w-1.5 h-1.5 bg-gold rounded-full flex-shrink-0" />
+            <span key={i} className="inline-flex items-center gap-4 px-10 font-display text-base md:text-lg tracking-wide">
+              <span className="w-2 h-2 bg-gold rounded-full flex-shrink-0" />
               <span className="text-gold font-bold uppercase">{item.athlete}</span>
-              <span className="text-white/60">{item.result}</span>
+              <span className="text-white/70 font-medium">{item.result}</span>
             </span>
           ))}
         </div>

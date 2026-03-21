@@ -1,10 +1,11 @@
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import { programFeatures } from '../data/program';
+import { useApply } from '../context/ApplyContext';
 import { useInView } from '../hooks/useInView';
 
 export default function Program() {
   const { ref, inView } = useInView(0.15);
+  const { openApply } = useApply();
 
   return (
     <section id="program" className="bg-surface-light py-20 md:py-28">
@@ -78,12 +79,12 @@ export default function Program() {
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.75 }}
             >
-              <Link
-                to="/apply"
-                className="inline-block font-display font-bold text-lg tracking-wider uppercase bg-gold text-purple-deep px-10 py-4 hover:bg-gold-bright transition-all hover:scale-105 no-underline"
+              <button
+                onClick={openApply}
+                className="font-display font-bold text-lg tracking-wider uppercase bg-gold text-purple-deep px-10 py-4 hover:bg-gold-bright transition-all hover:scale-105 border-none cursor-pointer"
               >
                 Apply Now
-              </Link>
+              </button>
             </motion.div>
           </motion.div>
         </div>

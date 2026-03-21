@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { useApply } from '../context/ApplyContext';
 
 function InstagramIcon() {
   return (
@@ -28,6 +29,7 @@ function GlobeIcon() {
 }
 
 export default function Footer() {
+  const { openApply } = useApply();
   return (
     <footer className="bg-purple-deep border-t border-white/5 py-16">
       <div className="max-w-7xl mx-auto px-6">
@@ -88,9 +90,9 @@ export default function Footer() {
               <a href="/#results" className="font-body text-base text-white/60 hover:text-gold transition-colors no-underline">
                 Results
               </a>
-              <Link to="/apply" className="font-body text-base text-white/60 hover:text-gold transition-colors no-underline">
+              <button onClick={openApply} className="font-body text-base text-white/60 hover:text-gold transition-colors bg-transparent border-none cursor-pointer p-0 text-left">
                 Apply
-              </Link>
+              </button>
             </div>
           </div>
 
@@ -116,12 +118,12 @@ export default function Footer() {
             <p className="font-body text-base text-white/60 mb-4">
               Limited spots available for elite athletes ready to compete at the next level.
             </p>
-            <Link
-              to="/apply"
-              className="inline-block font-display text-base font-bold tracking-wider uppercase bg-gold text-purple-deep px-8 py-3 hover:bg-gold-bright transition-all no-underline"
+            <button
+              onClick={openApply}
+              className="font-display text-base font-bold tracking-wider uppercase bg-gold text-purple-deep px-8 py-3 hover:bg-gold-bright transition-all border-none cursor-pointer"
             >
               Apply Now
-            </Link>
+            </button>
           </div>
         </div>
 

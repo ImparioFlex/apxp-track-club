@@ -1,9 +1,10 @@
-import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useInView } from '../hooks/useInView';
+import { useApply } from '../context/ApplyContext';
 
 export default function ApplyCTA() {
   const { ref, inView } = useInView(0.2);
+  const { openApply } = useApply();
 
   return (
     <section className="relative bg-purple-deep py-24 md:py-32 overflow-hidden">
@@ -31,12 +32,12 @@ export default function ApplyCTA() {
             APXP accepts a select number of athletes each year. If you're ready
             to compete at the highest level, start your application.
           </p>
-          <Link
-            to="/apply"
-            className="inline-block font-display font-bold text-lg md:text-xl tracking-wider uppercase bg-gold text-purple-deep px-12 py-5 hover:bg-gold-bright transition-all hover:scale-105 no-underline"
+          <button
+            onClick={openApply}
+            className="font-display font-bold text-lg md:text-xl tracking-wider uppercase bg-gold text-purple-deep px-12 py-5 hover:bg-gold-bright transition-all hover:scale-105 border-none cursor-pointer"
           >
             Begin Application →
-          </Link>
+          </button>
         </motion.div>
       </div>
     </section>

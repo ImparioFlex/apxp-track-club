@@ -1,11 +1,13 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useApply } from '../context/ApplyContext';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const location = useLocation();
+  const { openApply } = useApply();
   const isHome = location.pathname === '/';
 
   useEffect(() => {
@@ -52,12 +54,12 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
-          <Link
-            to="/apply"
-            className="font-display text-sm font-bold tracking-wider uppercase bg-gold text-purple-deep px-5 py-2.5 hover:bg-gold-bright transition-colors no-underline"
+          <button
+            onClick={openApply}
+            className="font-display text-sm font-bold tracking-wider uppercase bg-gold text-purple-deep px-5 py-2.5 hover:bg-gold-bright transition-colors border-none cursor-pointer"
           >
             Apply Now
-          </Link>
+          </button>
         </div>
 
         {/* Mobile Hamburger */}
@@ -92,13 +94,12 @@ export default function Navbar() {
                   {link.label}
                 </a>
               ))}
-              <Link
-                to="/apply"
-                onClick={() => setMobileOpen(false)}
-                className="font-display text-lg font-bold tracking-wider uppercase bg-gold text-purple-deep px-5 py-3 text-center no-underline mt-2"
+              <button
+                onClick={() => { setMobileOpen(false); openApply(); }}
+                className="font-display text-lg font-bold tracking-wider uppercase bg-gold text-purple-deep px-5 py-3 text-center border-none cursor-pointer mt-2"
               >
                 Apply Now
-              </Link>
+              </button>
             </div>
           </motion.div>
         )}

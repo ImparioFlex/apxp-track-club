@@ -48,8 +48,12 @@ export const coachBio = {
 };
 
 export const collegeLogos = [
-  { name: 'University of Texas', abbreviation: 'UT' },
-  { name: 'Texas A&M', abbreviation: 'TAMU' },
-  { name: 'UL Lafayette', abbreviation: 'ULL' },
-  { name: 'Northwood University', abbreviation: 'NU' },
+  { name: 'University of Texas', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Texas_Longhorns_logo.svg/190px-Texas_Longhorns_logo.svg.png' },
+  { name: 'Texas A&M', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Texas_A%26M_University_logo.svg/200px-Texas_A%26M_University_logo.svg.png' },
+  { name: 'University of Georgia', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Georgia_Bulldogs_logo.svg/200px-Georgia_Bulldogs_logo.svg.png' },
+  { name: 'LSU', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/LSU_Athletics_logo.svg/200px-LSU_Athletics_logo.svg.png' },
+  { name: 'UL Lafayette', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Louisiana_Ragin%27_Cajuns_logo.svg/200px-Louisiana_Ragin%27_Cajuns_logo.svg.png' },
+  { name: 'Alabama', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Alabama_Crimson_Tide_logo.svg/200px-Alabama_Crimson_Tide_logo.svg.png' },
+  { name: 'Oregon', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Oregon_Ducks_logo.svg/200px-Oregon_Ducks_logo.svg.png' },
+  { name: 'Florida', logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/1/14/Florida_Gators_gator_logo.svg/200px-Florida_Gators_gator_logo.svg.png' },
 ];
