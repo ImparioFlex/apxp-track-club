@@ -34,7 +34,7 @@ function NewsCard({ item, large = false }: { item: typeof newsItems[0]; large?: 
           </p>
         )}
         <div className="flex items-center justify-between">
-          <span className="font-body text-sm text-text-muted">{item.date}</span>
+          <span className="font-body text-base text-text-muted">{item.date}</span>
           {isRealLink && (
             <span className="font-display text-xs font-semibold tracking-wider uppercase text-purple-dark">
               {item.sourceName} →

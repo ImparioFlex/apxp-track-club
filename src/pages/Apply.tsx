@@ -186,7 +186,7 @@ export default function Apply() {
                 </h2>
 
                 <div>
-                  <label className="font-display text-xs font-bold tracking-widest uppercase text-text-muted block mb-1.5">
+                  <label className="font-display text-sm font-bold tracking-widest uppercase text-text-muted block mb-1.5">
                     Athlete Name *
                   </label>
                   <input
@@ -200,7 +200,7 @@ export default function Apply() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="font-display text-xs font-bold tracking-widest uppercase text-text-muted block mb-1.5">
+                    <label className="font-display text-sm font-bold tracking-widest uppercase text-text-muted block mb-1.5">
                       Date of Birth
                     </label>
                     <input
@@ -211,7 +211,7 @@ export default function Apply() {
                     />
                   </div>
                   <div>
-                    <label className="font-display text-xs font-bold tracking-widest uppercase text-text-muted block mb-1.5">
+                    <label className="font-display text-sm font-bold tracking-widest uppercase text-text-muted block mb-1.5">
                       Class Year
                     </label>
                     <select
@@ -230,7 +230,7 @@ export default function Apply() {
                 </div>
 
                 <div>
-                  <label className="font-display text-xs font-bold tracking-widest uppercase text-text-muted block mb-1.5">
+                  <label className="font-display text-sm font-bold tracking-widest uppercase text-text-muted block mb-1.5">
                     School *
                   </label>
                   <input
@@ -248,7 +248,7 @@ export default function Apply() {
                 </h3>
 
                 <div>
-                  <label className="font-display text-xs font-bold tracking-widest uppercase text-text-muted block mb-1.5">
+                  <label className="font-display text-sm font-bold tracking-widest uppercase text-text-muted block mb-1.5">
                     Name
                   </label>
                   <input
@@ -261,7 +261,7 @@ export default function Apply() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="font-display text-xs font-bold tracking-widest uppercase text-text-muted block mb-1.5">
+                    <label className="font-display text-sm font-bold tracking-widest uppercase text-text-muted block mb-1.5">
                       Email *
                     </label>
                     <input
@@ -272,7 +272,7 @@ export default function Apply() {
                     />
                   </div>
                   <div>
-                    <label className="font-display text-xs font-bold tracking-widest uppercase text-text-muted block mb-1.5">
+                    <label className="font-display text-sm font-bold tracking-widest uppercase text-text-muted block mb-1.5">
                       Phone
                     </label>
                     <input
@@ -299,7 +299,7 @@ export default function Apply() {
                 </h2>
 
                 <div>
-                  <label className="font-display text-xs font-bold tracking-widest uppercase text-text-muted block mb-3">
+                  <label className="font-display text-sm font-bold tracking-widest uppercase text-text-muted block mb-3">
                     Primary Events * (select all that apply)
                   </label>
                   <div className="flex flex-wrap gap-2">
@@ -322,20 +322,20 @@ export default function Apply() {
                 {/* Dynamic PR fields */}
                 {form.events.length > 0 && (
                   <div>
-                    <label className="font-display text-xs font-bold tracking-widest uppercase text-text-muted block mb-3">
+                    <label className="font-display text-sm font-bold tracking-widest uppercase text-text-muted block mb-3">
                       Current PRs
                     </label>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                       {form.events.map(event => (
                         <div key={event}>
-                          <span className="font-display text-xs font-semibold text-purple-dark block mb-1">
+                          <span className="font-display text-sm font-semibold text-purple-dark block mb-1">
                             {event}
                           </span>
                           <input
                             type="text"
                             value={form.prs[event] || ''}
                             onChange={e => updatePR(event, e.target.value)}
-                            className="w-full font-body text-sm border-2 border-gray-200 focus:border-purple-dark outline-none px-3 py-2 bg-white transition-colors"
+                            className="w-full font-body text-base border-2 border-gray-200 focus:border-purple-dark outline-none px-4 py-3 bg-white transition-colors"
                             placeholder="e.g., 10.50"
                           />
                         </div>
@@ -345,7 +345,7 @@ export default function Apply() {
                 )}
 
                 <div>
-                  <label className="font-display text-xs font-bold tracking-widest uppercase text-text-muted block mb-1.5">
+                  <label className="font-display text-sm font-bold tracking-widest uppercase text-text-muted block mb-1.5">
                     Current Club / Team
                   </label>
                   <input
@@ -358,7 +358,7 @@ export default function Apply() {
                 </div>
 
                 <div>
-                  <label className="font-display text-xs font-bold tracking-widest uppercase text-text-muted block mb-1.5">
+                  <label className="font-display text-sm font-bold tracking-widest uppercase text-text-muted block mb-1.5">
                     Highlight Video Link
                   </label>
                   <input
@@ -371,7 +371,7 @@ export default function Apply() {
                 </div>
 
                 <div>
-                  <label className="font-display text-xs font-bold tracking-widest uppercase text-text-muted block mb-1.5">
+                  <label className="font-display text-sm font-bold tracking-widest uppercase text-text-muted block mb-1.5">
                     Athletic.net or MileSplit Profile URL
                   </label>
                   <input
@@ -398,7 +398,7 @@ export default function Apply() {
                 </h2>
 
                 <div>
-                  <label className="font-display text-xs font-bold tracking-widest uppercase text-text-muted block mb-1.5">
+                  <label className="font-display text-sm font-bold tracking-widest uppercase text-text-muted block mb-1.5">
                     What are your goals for the next 1-2 years?
                   </label>
                   <textarea
@@ -411,7 +411,7 @@ export default function Apply() {
                 </div>
 
                 <div>
-                  <label className="font-display text-xs font-bold tracking-widest uppercase text-text-muted block mb-1.5">
+                  <label className="font-display text-sm font-bold tracking-widest uppercase text-text-muted block mb-1.5">
                     Target Colleges
                   </label>
                   <input
@@ -424,7 +424,7 @@ export default function Apply() {
                 </div>
 
                 <div>
-                  <label className="font-display text-xs font-bold tracking-widest uppercase text-text-muted block mb-1.5">
+                  <label className="font-display text-sm font-bold tracking-widest uppercase text-text-muted block mb-1.5">
                     How did you hear about APXP?
                   </label>
                   <select
@@ -440,7 +440,7 @@ export default function Apply() {
                 </div>
 
                 <div>
-                  <label className="font-display text-xs font-bold tracking-widest uppercase text-text-muted block mb-1.5">
+                  <label className="font-display text-sm font-bold tracking-widest uppercase text-text-muted block mb-1.5">
                     Anything else Coach McCray should know?
                   </label>
                   <textarea

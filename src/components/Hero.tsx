@@ -96,16 +96,16 @@ export default function Hero() {
           className="grid grid-cols-1 sm:grid-cols-3 gap-8 md:gap-16 mb-14 max-w-3xl mx-auto"
         >
           <div className="text-center">
-            <CountUp end="6.59" duration={2500} />
-            <p className="font-display text-xs md:text-sm tracking-widest uppercase text-white/70 mt-2">World U18 Record</p>
+            <CountUp end="3" duration={1500} />
+            <p className="font-display text-sm md:text-base tracking-widest uppercase text-white/70 mt-2">World & National Records</p>
           </div>
           <div className="text-center">
             <CountUp end="100" suffix="%" duration={2000} />
-            <p className="font-display text-xs md:text-sm tracking-widest uppercase text-white/70 mt-2">Scholarship Rate</p>
+            <p className="font-display text-sm md:text-base tracking-widest uppercase text-white/70 mt-2">Scholarship Rate</p>
           </div>
           <div className="text-center">
             <span className="tabular-nums font-display font-bold text-5xl md:text-7xl text-gold leading-none">$1M+</span>
-            <p className="font-display text-xs md:text-sm tracking-widest uppercase text-white/70 mt-2">Athletic Aid Earned</p>
+            <p className="font-display text-sm md:text-base tracking-widest uppercase text-white/70 mt-2">Athletic Aid Earned</p>
           </div>
         </motion.div>
 

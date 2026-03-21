@@ -49,7 +49,7 @@ export default function Coach() {
               {coachBio.credentials.map(cred => (
                 <span
                   key={cred}
-                  className="font-display text-xs font-bold tracking-wider uppercase bg-purple-deep/10 text-purple-dark px-3 py-1.5"
+                  className="font-display text-sm font-bold tracking-wider uppercase bg-purple-deep/10 text-purple-dark px-4 py-2"
                 >
                   {cred}
                 </span>

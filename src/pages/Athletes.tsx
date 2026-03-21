@@ -34,7 +34,7 @@ function AthleteProfileCard({ athlete, index }: { athlete: Athlete; index: numbe
           <h3 className="font-display font-extrabold text-xl uppercase text-white leading-none mb-1">
             {athlete.name}
           </h3>
-          <p className="font-display text-xs tracking-wider text-white/60 uppercase">
+          <p className="font-display text-sm tracking-wider text-white/60 uppercase">
             {athlete.alumni ? `Alumni · Class of ${athlete.classYear}` : `${athlete.school} · ${athlete.classYear}`}
           </p>
         </div>
@@ -47,7 +47,7 @@ function AthleteProfileCard({ athlete, index }: { athlete: Athlete; index: numbe
           {athlete.events.map(event => (
             <span
               key={event}
-              className="font-display text-[10px] font-semibold tracking-wider uppercase bg-purple-deep/8 text-purple-dark px-2 py-0.5"
+              className="font-display text-xs font-semibold tracking-wider uppercase bg-purple-deep/8 text-purple-dark px-2.5 py-1"
             >
               {event}
             </span>
@@ -61,7 +61,7 @@ function AthleteProfileCard({ athlete, index }: { athlete: Athlete; index: numbe
               <span className="font-display font-bold text-lg text-purple-dark block leading-none">
                 {stat.value}
               </span>
-              <span className="font-display text-[9px] tracking-widest uppercase text-text-muted mt-0.5 block">
+              <span className="font-display text-xs tracking-widest uppercase text-text-muted mt-0.5 block">
                 {stat.note || stat.label}
               </span>
             </div>
@@ -71,14 +71,14 @@ function AthleteProfileCard({ athlete, index }: { athlete: Athlete; index: numbe
         {/* PRs expandable */}
         {athlete.prs.length > 0 && (
           <div className="mt-3 pt-3 border-t border-surface-light">
-            <p className="font-display text-[10px] font-bold tracking-widest uppercase text-text-muted mb-1.5">
+            <p className="font-display text-xs font-bold tracking-widest uppercase text-text-muted mb-1.5">
               Personal Records
             </p>
             <div className="space-y-1">
               {athlete.prs.slice(0, 3).map((pr, i) => (
                 <div key={i} className="flex justify-between items-baseline">
-                  <span className="font-display text-xs font-semibold text-text-dark">{pr.event}</span>
-                  <span className="font-display text-xs font-bold text-purple-dark">{pr.mark}</span>
+                  <span className="font-display text-sm font-semibold text-text-dark">{pr.event}</span>
+                  <span className="font-display text-sm font-bold text-purple-dark">{pr.mark}</span>
                 </div>
               ))}
             </div>

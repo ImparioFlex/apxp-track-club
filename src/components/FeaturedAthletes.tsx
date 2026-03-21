@@ -38,7 +38,7 @@ function AthleteCard({ athlete, index }: { athlete: Athlete; index: number }) {
           <h3 className="font-display font-extrabold text-2xl md:text-3xl uppercase text-white leading-none mb-1">
             {athlete.name}
           </h3>
-          <p className="font-display text-sm tracking-wider text-white/50 uppercase">
+          <p className="font-display text-base tracking-wider text-white/60 uppercase">
             {athlete.school} · Class of {athlete.classYear}
           </p>
         </div>
@@ -51,7 +51,7 @@ function AthleteCard({ athlete, index }: { athlete: Athlete; index: number }) {
             <span className="font-display font-bold text-xl md:text-2xl text-gold leading-none block">
               {stat.value}
             </span>
-            <span className="font-display text-[11px] tracking-widest uppercase text-white/60 mt-1 block">
+            <span className="font-display text-xs tracking-widest uppercase text-white/60 mt-1 block">
               {stat.note || stat.label}
             </span>
           </div>
@@ -61,7 +61,7 @@ function AthleteCard({ athlete, index }: { athlete: Athlete; index: number }) {
       {/* Expand button */}
       <button
         onClick={() => setExpanded(!expanded)}
-        className="w-full py-3 px-5 font-display text-sm font-bold tracking-widest uppercase text-gold hover:text-gold-bright transition-colors bg-purple-mid/30 hover:bg-purple-mid/50 border-none cursor-pointer flex items-center justify-center gap-2"
+        className="w-full py-3 px-5 font-display text-base font-bold tracking-widest uppercase text-gold hover:text-gold-bright transition-colors bg-purple-mid/30 hover:bg-purple-mid/50 border-none cursor-pointer flex items-center justify-center gap-2"
       >
         {expanded ? 'Close' : 'Full Bio'}
         <motion.span
@@ -104,7 +104,7 @@ function AthleteCard({ athlete, index }: { athlete: Athlete; index: number }) {
                 <div className="grid grid-cols-2 gap-2">
                   {athlete.prs.map((pr, i) => (
                     <div key={i} className="bg-purple-deep/50 px-3 py-2 rounded">
-                      <span className="font-display font-bold text-sm text-white">{pr.event}: {pr.mark}</span>
+                      <span className="font-display font-bold text-base text-white">{pr.event}: {pr.mark}</span>
                       {pr.note && (
                         <span className="block font-body text-xs text-white/60 mt-0.5">{pr.note}</span>
                       )}
@@ -121,7 +121,7 @@ function AthleteCard({ athlete, index }: { athlete: Athlete; index: number }) {
                   </h4>
                   <ul className="space-y-1">
                     {athlete.awards.map((award, i) => (
-                      <li key={i} className="font-body text-sm text-white/70 flex items-start gap-2">
+                      <li key={i} className="font-body text-base text-white/70 flex items-start gap-2">
                         <span className="text-gold mt-1">•</span> {award}
                       </li>
                     ))}

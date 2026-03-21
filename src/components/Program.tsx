@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { programFeatures } from '../data/program';
 import { useInView } from '../hooks/useInView';
 
@@ -70,6 +71,20 @@ export default function Program() {
                 </div>
               </motion.div>
             ))}
+
+            {/* Apply CTA */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: 0.75 }}
+            >
+              <Link
+                to="/apply"
+                className="inline-block font-display font-bold text-lg tracking-wider uppercase bg-gold text-purple-deep px-10 py-4 hover:bg-gold-bright transition-all hover:scale-105 no-underline"
+              >
+                Apply Now
+              </Link>
+            </motion.div>
           </motion.div>
         </div>
       </div>

@@ -30,7 +30,7 @@ function AnimatedStat({ stat, inView }: { stat: typeof pipelineStats[0]; inView:
       <span className="font-display font-bold text-5xl md:text-6xl text-gold leading-none block tabular-nums">
         {stat.prefix || ''}{count}{stat.suffix}
       </span>
-      <p className="font-display text-xs md:text-sm tracking-widest uppercase text-white/60 mt-2 max-w-[180px] mx-auto">
+      <p className="font-display text-sm md:text-base tracking-widest uppercase text-white/60 mt-2 max-w-[180px] mx-auto">
         {stat.label}
       </p>
     </div>
