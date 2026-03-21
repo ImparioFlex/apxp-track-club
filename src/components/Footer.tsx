@@ -36,10 +36,12 @@ export default function Footer() {
         {/* Top section — big logo + tagline */}
         <div className="flex flex-col md:flex-row items-start md:items-end justify-between gap-6 mb-12">
           <div>
-            <span className="font-display font-extrabold text-4xl md:text-5xl tracking-wider text-white block">
-              APXP
-            </span>
-            <span className="font-display text-lg font-semibold tracking-[0.2em] text-gold uppercase block mt-1">
+            <img
+              src="/apxp-logo-light.png"
+              alt="APXP Speed Development"
+              className="h-12 md:h-14 w-auto mb-2"
+            />
+            <span className="font-display text-base font-semibold tracking-[0.2em] text-gold uppercase block">
               Speed Development
             </span>
           </div>

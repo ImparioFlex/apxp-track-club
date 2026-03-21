@@ -34,13 +34,12 @@ export default function Navbar() {
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${bg}`}>
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-18">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-2 no-underline">
-          <span className="font-display font-bold text-2xl tracking-wider text-white">
-            APXP
-          </span>
-          <span className="hidden sm:inline font-display text-sm font-medium tracking-widest text-gold uppercase">
-            Speed Development
-          </span>
+        <Link to="/" className="flex items-center no-underline">
+          <img
+            src="/apxp-logo-light.png"
+            alt="APXP Speed Development"
+            className="h-8 md:h-10 w-auto"
+          />
         </Link>
 
         {/* Desktop Links */}
