@@ -48,7 +48,7 @@ export const athletes: Athlete[] = [
       { title: 'EssentiallySports: Next Usain Bolt', url: 'https://www.essentiallysports.com/olympics-news-track-and-field-news-next-usain-bolt-texas-native-shocks-track-and-field-world-over-impossible-run/' },
       { title: 'VYPE: Fastest Kid in America', url: 'https://www.vype.com/Texas/Houston/the-fastest-kid-in-america-ce-king-s-dillon-mitchell-dual-sport-star-making-national-headlines' },
     ],
-    photo: 'https://image-cdn.essentiallysports.com/wp-content/uploads/Dillon-Mitchell-1.jpg',
+    photo: 'https://s3media.247sports.com/Uploads/Assets/117/347/13347117.png',
     featured: true,
     alumni: false,
   },
